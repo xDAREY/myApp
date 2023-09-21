@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 void main()  =>runApp(MaterialApp(
-  home: Home()
+  home: Home(),
+      debugShowCheckedModeBanner: false,
   ));
 
 class Home extends StatelessWidget {
@@ -16,7 +17,8 @@ class Home extends StatelessWidget {
       ),
       body: const Center(
         child: Text(
-          "Hello my Flutterians",
+          """ Hello my Flutterians
+         \n I  am new to the flutter language """,
           style: TextStyle(
               fontSize: 30.0,
               fontWeight: FontWeight.bold,
@@ -28,7 +30,7 @@ class Home extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () { },
-        child:  Text('Click Me'),
+        child:  Text('Click'),
         backgroundColor: Colors.amber,
       ),
     );
