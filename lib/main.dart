@@ -15,18 +15,8 @@ class Home extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.amber,
       ),
-      body: const Center(
-        child: Text(
-          """ Hello my Flutterians
-         \n I  am new to the flutter language """,
-          style: TextStyle(
-              fontSize: 30.0,
-              fontWeight: FontWeight.bold,
-              letterSpacing: 2.0,
-              color:  Colors.deepOrange,
-              fontFamily: 'Choco'
-          ),
-        ),
+      body:  Center(
+        child: Image.asset('assets/arg.jpg'),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () { },
