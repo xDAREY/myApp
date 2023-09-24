@@ -11,12 +11,16 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("my first flutter app"),
+        title:  Text("my first flutter app"),
         centerTitle: true,
         backgroundColor: Colors.amber,
       ),
       body:  Center(
-        child: Image.asset('assets/arg.jpg'),
+        child: Icon(
+          Icons.airport_shuttle,
+          color: Colors.deepOrange,
+          size: 230,
+        ),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () { },
