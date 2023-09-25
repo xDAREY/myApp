@@ -11,21 +11,33 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title:  Text("my first flutter app"),
+        title:  const Text("my first flutter app"),
         centerTitle: true,
         backgroundColor: Colors.amber,
       ),
       body:  Center(
-        child: Icon(
-          Icons.airport_shuttle,
-          color: Colors.deepOrange,
-          size: 230,
+        child:ElevatedButton.icon(
+            onPressed: () {
+              print('Mail sent successfully');
+            },
+          style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.lightBlueAccent,
+            foregroundColor: Colors.white,
+            elevation: 20,
+            shadowColor: Colors.lightBlue,
+          ),
+          icon: const Icon(
+            Icons.mail,
+          ),
+          label: const Text('Mail me'),
+
+
         ),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () { },
-        child:  Text('Click'),
         backgroundColor: Colors.amber,
+        child:  const Text('Click'),
       ),
     );
   }
