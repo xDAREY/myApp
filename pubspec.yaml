@@ -75,9 +75,14 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
+   - family: Elsie
+     fonts:
+       - asset: fonts/Elsie-Regular.tff
+
    - family: Choco
      fonts:
        - asset: fonts/Chocolate Covered Raindrops.ttf
+
 
   #
   # For details regarding fonts from package dependencies,
