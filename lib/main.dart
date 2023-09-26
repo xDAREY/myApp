@@ -15,19 +15,37 @@ class Home extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.lightBlue,
       ),
-      body:  Center(
-        child: ElevatedButton(
-          onPressed:  () {
-            print('Hello Viewers, I am learning Flutter');
-          },
-          child: Text('Click me to find out'),
-          style: ElevatedButton.styleFrom(
-            backgroundColor: Colors.pink,
-            foregroundColor: Colors.white,
+      body:  Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Center(
+          child: Column(
+            children: [
+              Text('Hello guys, it is reflection time',
+              style: TextStyle(
+                color: Colors.red,
+                fontWeight: FontWeight.bold,
+                fontSize: 20,
+
+
+              ),
+              ),
+              IconButton(
+                onPressed: () {
+                  print('We are making progress');
+                },
+                icon: Icon(Icons.adb_outlined),
+                iconSize: 100,
+                color: Colors.lightBlue,
+                splashColor: Colors.red,
+
+
+
+              ),
+            ],
           ),
         ),
       ),
-      backgroundColor: Colors.green,
+      backgroundColor: Colors.white,
     );
   }
 }
