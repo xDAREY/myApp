@@ -25,10 +25,9 @@ class Home extends StatelessWidget {
                 color: Colors.red,
                 fontWeight: FontWeight.bold,
                 fontSize: 20,
-
-
               ),
               ),
+              
               IconButton(
                 onPressed: () {
                   print('We are making progress');
@@ -37,14 +36,16 @@ class Home extends StatelessWidget {
                 iconSize: 100,
                 color: Colors.lightBlue,
                 splashColor: Colors.red,
+              ),
 
-
-
+              Image(
+                image: AssetImage('assets/arg.jpg'),
               ),
             ],
           ),
         ),
       ),
+      
       backgroundColor: Colors.white,
     );
   }
