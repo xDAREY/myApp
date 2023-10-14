@@ -29,25 +29,32 @@ class main2 extends StatelessWidget {
 
       ),
       body: Center(
-        child: ElevatedButton.icon(
-          icon: Icon(Icons.add_shopping_cart_outlined),
-          onPressed: () {},
-          label: Text('Testing'),
-          style: ElevatedButton.styleFrom(
-            padding: EdgeInsets.all(20.0),
-            fixedSize: Size(300, 80),
-            textStyle: TextStyle(
-              fontSize: 25,
-              fontWeight: FontWeight.bold
-            ),
-            foregroundColor: Colors.black87,
-            backgroundColor: Colors.yellow,
-            shadowColor: Colors.yellow,
-            elevation: 15,
-            side: BorderSide(color: Colors.black87, width: 2),
-            shape: StadiumBorder()
-          ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text('Appbar Tutorial',  style: TextStyle(color: Colors.purpleAccent,  fontSize: 18)),
+            Text('iconButtons', style: TextStyle(color: Colors.purpleAccent,  fontSize: 15))
+          ],
         ),
+        // child: ElevatedButton.icon(
+        //   icon: Icon(Icons.add_shopping_cart_outlined),
+        //   onPressed: () {},
+        //   label: Text('Testing'),
+        //   style: ElevatedButton.styleFrom(
+        //     padding: EdgeInsets.all(20.0),
+        //     fixedSize: Size(300, 80),
+        //     textStyle: TextStyle(
+        //       fontSize: 25,
+        //       fontWeight: FontWeight.bold
+        //     ),
+        //     foregroundColor: Colors.black87,
+        //     backgroundColor: Colors.yellow,
+        //     shadowColor: Colors.yellow,
+        //     elevation: 15,
+        //     side: BorderSide(color: Colors.black87, width: 2),
+        //     shape: StadiumBorder()
+        //   ),
+        // ),
       ),
     );
   }
