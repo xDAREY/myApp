@@ -15,35 +15,39 @@ class Home extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.lightBlue,
       ),
-      body:  Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Center(
-          child: Column(
-            children: [
-              Text('Hello guys, it is reflection time',
-              style: TextStyle(
-                color: Colors.red,
-                fontWeight: FontWeight.bold,
-                fontSize: 20,
-              ),
-              ),
-              
-              IconButton(
-                onPressed: () {
-                  print('We are making progress');
-                },
-                icon: Icon(Icons.adb_outlined),
-                iconSize: 100,
-                color: Colors.lightBlue,
-                splashColor: Colors.red,
-              ),
-
-              Image(
-                image: AssetImage('assets/arg.jpg'),
-              ),
-            ],
+      body:  Row(
+        children: [
+          Expanded(
+              child: Image.asset('assets/arg.jpg'),
+            flex: 3,
           ),
-        ),
+          Expanded(
+            flex: 3,
+            child: Container(
+              padding: EdgeInsets.all(30.0),
+              color: Colors.pink,
+              child: Text('1'),
+            ),
+          ),
+          
+          Expanded(
+            flex: 2,
+            child: Container(
+              padding: EdgeInsets.all(30.0),
+              color: Colors.greenAccent,
+              child: Text('2'),
+            ),
+          ),
+          
+          Expanded(
+            flex: 1,
+            child: Container(
+              padding: EdgeInsets.all(30.0),
+              color: Colors.amber,
+              child: Text('3'),
+            ),
+          ),
+        ],
       ),
       
       backgroundColor: Colors.white,

@@ -1,63 +1,55 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(const main2());
-}
+void main()  =>runApp(MaterialApp(
+  home: main2(),
+  debugShowCheckedModeBanner: false,
+));
 
 class main2 extends StatelessWidget {
-  const main2({super.key});
 
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.yellow),
-        useMaterial3: true,
-      ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
-    );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
-
-
-
-  final String title;
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-
-      _counter++;
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return  Scaffold(
+    return Scaffold(
+      extendBodyBehindAppBar: true,
       appBar: AppBar(
-        actions: [],
-        title: IconButton(
+        leading: IconButton(icon:Icon( Icons.menu), onPressed: (){},),
+        title: Text('Home'),
+        actions: [
+          IconButton(icon:Icon( Icons.shopping_bag), onPressed: (){},),
+          IconButton(icon:Icon( Icons.search), onPressed: (){},),
+          IconButton(icon:Icon( Icons.menu_book), onPressed: (){},)
+        ],
+        elevation: 0,
+        titleSpacing: 20.0,
+        backgroundColor: Colors.amberAccent,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.vertical(bottom: Radius.circular(20))
+        ),
+
+      ),
+      body: Center(
+        child: ElevatedButton.icon(
+          icon: Icon(Icons.add_shopping_cart_outlined),
           onPressed: () {},
-          icon: const Icon(
-          Icons.home,
+          label: Text('Testing'),
+          style: ElevatedButton.styleFrom(
+            padding: EdgeInsets.all(20.0),
+            fixedSize: Size(300, 80),
+            textStyle: TextStyle(
+              fontSize: 25,
+              fontWeight: FontWeight.bold
+            ),
+            foregroundColor: Colors.black87,
+            backgroundColor: Colors.yellow,
+            shadowColor: Colors.yellow,
+            elevation: 15,
+            side: BorderSide(color: Colors.black87, width: 2),
+            shape: StadiumBorder()
           ),
         ),
-        centerTitle: false,
       ),
     );
-    
   }
 }
+
