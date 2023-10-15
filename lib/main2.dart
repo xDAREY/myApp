@@ -11,7 +11,6 @@ class main2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      extendBodyBehindAppBar: true,
       appBar: AppBar(
         leading: IconButton(icon:Icon( Icons.menu), onPressed: (){},),
         title: Text('Home'),
@@ -23,38 +22,54 @@ class main2 extends StatelessWidget {
         elevation: 0,
         titleSpacing: 20.0,
         backgroundColor: Colors.amberAccent,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.vertical(bottom: Radius.circular(20))
-        ),
-
       ),
-      body: Center(
+      body: Container(
+        padding: EdgeInsets.all(8.0),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text('Appbar Tutorial',  style: TextStyle(color: Colors.purpleAccent,  fontSize: 18)),
-            Text('iconButtons', style: TextStyle(color: Colors.purpleAccent,  fontSize: 15))
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Image(image: AssetImage("assets/arg.jpg"),width: 120,),
+                Image(image: AssetImage("assets/arg.jpg"),width: 120,),
+                Image(image: AssetImage("assets/arg.jpg"),width: 120,)
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Icon(Icons.star),
+                Icon(Icons.star),
+                Icon(Icons.star),
+                Icon(Icons.star),
+                Icon(Icons.star)
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Column(
+                  children: [
+                    IconButton(icon:Icon( Icons.settings), onPressed: () {}),
+                    Text('Home')
+                  ],
+                ),
+                Column(
+                  children: [
+                    IconButton(icon:Icon( Icons.settings), onPressed: () {}),
+                    Text('settings')
+                  ],
+                ),
+                Column(
+                  children: [
+                    IconButton(icon:Icon( Icons.phone), onPressed: () {}),
+                    Text('call')
+                  ],
+                ),
+              ],
+            ),
           ],
         ),
-        // child: ElevatedButton.icon(
-        //   icon: Icon(Icons.add_shopping_cart_outlined),
-        //   onPressed: () {},
-        //   label: Text('Testing'),
-        //   style: ElevatedButton.styleFrom(
-        //     padding: EdgeInsets.all(20.0),
-        //     fixedSize: Size(300, 80),
-        //     textStyle: TextStyle(
-        //       fontSize: 25,
-        //       fontWeight: FontWeight.bold
-        //     ),
-        //     foregroundColor: Colors.black87,
-        //     backgroundColor: Colors.yellow,
-        //     shadowColor: Colors.yellow,
-        //     elevation: 15,
-        //     side: BorderSide(color: Colors.black87, width: 2),
-        //     shape: StadiumBorder()
-        //   ),
-        // ),
       ),
     );
   }
