@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 import 'package:flutter/material.dart';
 
 void main()  =>runApp(MaterialApp(
@@ -18,15 +16,15 @@ class main2 extends StatelessWidget {
         title: Text('pingNr'),
         actions: [
           // IconButton(icon:Icon( Icons.shopping_bag), onPressed: (){},),
-          // IconButton(icon:Icon( Icons.search), onPressed: (){},),
+          IconButton(icon:Icon( Icons.search), onPressed: (){},),
           IconButton(icon:Icon( Icons.call), onPressed: (){},)
         ],
         elevation: 0,
         titleSpacing: 20.0,
-        backgroundColor: Colors.greenAccent,
+        backgroundColor: Colors.green,
       ),
       body: Container(
-        padding: EdgeInsets.all(8.0),
+        padding: EdgeInsets.all(10.0),
         child: ListView(
           children: [
             ListTile(
@@ -35,6 +33,7 @@ class main2 extends StatelessWidget {
               subtitle: Text('Life sucks (:', style: TextStyle(color: Colors.black)),
               trailing: Icon(Icons.looks_one_rounded, color: Colors.red,),
               onTap: () {},
+              // tileColor: Colors.blueGrey,
             ),
             ListTile(
               leading: CircleAvatar(child: Icon(Icons.man, size: 30.0,), backgroundColor: Colors.lightBlueAccent,),
@@ -72,7 +71,7 @@ class main2 extends StatelessWidget {
               onTap: () {},
             ),
             ListTile(
-              leading: CircleAvatar(child: Icon(Icons.man, size: 30.0,), backgroundColor: Colors.lightBlueAccent,),
+              leading: CircleAvatar(child: Icon(Icons.laptop_chromebook_rounded, size: 30.0,), backgroundColor: Colors.lightBlueAccent,),
               title: Text('Microsoft', style: TextStyle(fontWeight: FontWeight.bold, color: Colors.indigo)),
               subtitle: Text('Unfortunately, we would not be moving forward with your application.', style: TextStyle(color: Colors.black),),
               trailing: Icon(Icons.looks_one_rounded, color: Colors.red,),
